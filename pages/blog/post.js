@@ -19,10 +19,9 @@ export default function BlogPost() {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
         >
           <Container>
-            <m.div variants={fade}>
+            <m.div variants={fade} className="mb-12 md:mb-16 xl:mb-24">
               <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-3">Blog - Example Post</h1>
               <h2 className="mb-4 italic">By: Rosie Riley - 10th April 2021</h2>
               <div className="content max-w-3xl mb-4">
@@ -31,13 +30,15 @@ export default function BlogPost() {
                 <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
               
-              <FancyLink destination="/" a11yText="Navigate to the blog index page" label="Back To All Posts" underline />
+              <FancyLink destination="/blog" a11yText="Navigate to the blog index page" label="Back To All Posts" underline />
             </m.div>
           </Container>
+
+          <m.div variants={fade} className="w-full">
+            <Footer />
+          </m.div>
         </m.div>
       </LazyMotion>
-
-      <Footer />
     </Layout>
   )
 }

@@ -19,10 +19,9 @@ export default function GetInvolved() {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
         >
           <Container>
-            <m.div variants={fade}>
+            <m.div variants={fade} className="mb-12 md:mb-16 xl:mb-24">
               <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Get Involved</h1>
               <div className="content max-w-3xl mb-4">
                 <p>Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share & learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
@@ -40,10 +39,12 @@ export default function GetInvolved() {
               </div>
             </m.div>
           </Container>
+
+          <m.div variants={fade} className="w-full">
+            <Footer />
+          </m.div>
         </m.div>
       </LazyMotion>
-
-      <Footer />
     </Layout>
   )
 }

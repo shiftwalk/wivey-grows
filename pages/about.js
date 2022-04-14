@@ -19,24 +19,37 @@ export default function About() {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
         >
           <Container>
-            <m.div variants={fade}>
+            <m.div variants={fade} className="mb-12 md:mb-16 xl:mb-24">
               <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">About Page</h1>
-              <div className="content max-w-3xl mb-4">
+              <div className="content max-w-3xl mb-8 md:mb-12">
                 <p>Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share & learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
 
                 <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <h2 className="font-bold text-xl md:text-2xl xl:text-3xl mb-4 mt-12">Our Growers</h2>
+                
+                <p className="w-8/12">Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
-              
-              <FancyLink destination="/" a11yText="Navigate to the home page" label="Home Page" underline />
+
+              <div className="grid grid-cols-12 gap-6 md:gap-8">
+                {[...Array(8)].map((index) => ( 
+                  <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 bg-gray-100 p-6">
+                    <h3 className="font-bold text-lg md:text-xl mb-2">Rosie Riley</h3>
+                    
+                    <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                  </div>
+                ))}
+              </div>
             </m.div>
           </Container>
+
+          <m.div variants={fade} className="w-full">
+            <Footer />
+          </m.div>
         </m.div>
       </LazyMotion>
-
-      <Footer />
     </Layout>
   )
 }

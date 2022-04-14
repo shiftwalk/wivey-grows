@@ -18,6 +18,10 @@ export default function Header({ active }) {
             <FancyLink destination="/blog" a11yText="Navigate to the blog page" label="Blog" active={active == 'blog'} />
             
             <FancyLink destination="/get-involved" a11yText="Navigate to the get involved page" label="Get Involved" active={active == 'get-involved'} />
+
+            <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to membership login'} className={`hover:text-gray-500 focus:text-gray-500`}>
+              Login
+            </a>
           </nav>
         </div>
       </Container>
