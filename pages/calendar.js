@@ -7,12 +7,12 @@ import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
-export default function About() {
+export default function Calendar() {
   return (
     <Layout>
-      <NextSeo title="About" />
+      <NextSeo title="Calendar" />
 
-      <Header active={'about'} />
+      <Header active={'calendar'} />
 
       <LazyMotion features={domAnimation}>
         <m.div
@@ -23,14 +23,14 @@ export default function About() {
         >
           <Container>
             <m.div variants={fade}>
-              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">About Page</h1>
+              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Calendar</h1>
               <div className="content max-w-3xl mb-4">
                 <p>Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share & learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
 
                 <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
-              
-              <FancyLink destination="/" a11yText="Navigate to the home page" label="Home Page" underline />
+
+              <a target="_blank" rel="noopener noreferrer" href="https://localendar.com/elsie?JSP=PublishedCalendar&mode=PUBLISH_PUBLIC&search_type=M0&start_date=04/01/22&calendar_id=2658268" aria-label={'Navigate to our calendar'} className={`hover:text-gray-500 focus:text-gray-500 underline`}>View Our Full Calendar</a>
             </m.div>
           </Container>
         </m.div>

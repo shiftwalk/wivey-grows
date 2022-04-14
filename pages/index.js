@@ -12,7 +12,7 @@ export default function Home() {
     <Layout>
       <NextSeo title="Home" />
 
-      <Header />
+      <Header active={'home'} />
       
       <LazyMotion features={domAnimation}>
         <m.main
@@ -23,14 +23,14 @@ export default function Home() {
         >
           <Container>
             <m.article variants={fade}>
-              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Next x Tailwind x Motion.</h1>
+              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Wivey Grows</h1>
               <div className="content max-w-3xl mb-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                <p>Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share & learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
 
                 <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
               
-              <FancyLink destination="/about" a11yText="Navigate to the about page" label="About Page" />
+              <FancyLink destination="/about" a11yText="Navigate to the about page" label="About Page" underline />
             </m.article>
           </Container>
         </m.main>
