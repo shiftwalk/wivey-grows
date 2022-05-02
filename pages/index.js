@@ -75,7 +75,7 @@ export default function Home() {
 
               <h1 className="text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">Wivey Grows</h1>
             </div>
-            <p className="text-xl md:text-2xl xl:text-3xl max-w-[980px] mx-auto">Wivey Grows is a grassroots project run by locals. Our mission is to provide the opportunity, space and support for all ages and abilities to grow, eat, learn, create and play in a nurtured and shared haven.</p>
+            <p className="text-xl md:text-[23px] xl:text-[27px] leading-snug md:leading-snug xl:leading-snug max-w-[780px] 2xl:max-w-[880px] mx-auto">Wivey Grows is a grassroots project run by locals. Our mission is to provide the opportunity, space and support for all ages and abilities to grow, eat, learn, create and play in a nurtured and shared haven.</p>
           </div>
 
           <div className="flex space-x-5 justify-center">
