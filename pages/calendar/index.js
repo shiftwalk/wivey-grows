@@ -17,7 +17,7 @@ export default function Calendar() {
       <Container>
         <div className="relative">
           <article className="mb-[10vw]">
-            <div className="flex flex-wrap md:-mx-10 xl:items-center mb-[13vw]">
+            <div className="flex flex-wrap xl:items-center mb-[13vw]">
               <p className="text-lg md:text-xl xl:text-2xl">Embed stuff will go here...</p>
             </div>
           </article>
