@@ -5,10 +5,8 @@ import FancyLink from './fancyLink'
 export default function Footer() {
   return (
     <footer className="bg-yellow text-off-white pt-10 md:pt-16 xl:pt-24 pb-5 relative z-0  mt-[28vw]">
-      <div className="w-full text-yellow absolute top-0 left-0 right-0 mt-[-20vw]">
-        <svg className="w-full bg-off-white" viewBox="0 0 1440 320">
-          <path fill="currentColor" d="M0,192L48,186.7C96,181,192,171,288,181.3C384,192,480,224,576,224C672,224,768,192,864,170.7C960,149,1056,139,1152,138.7C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
+      <div className="w-full text-yellow absolute top-0 left-0 right-0 mt-[-6vw]">
+        <svg className="w-full bg-off-white" viewBox="0 0 1599 105" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 62.595S164.5-6.185 406.5.451c242 6.637 238.543 49.932 393 62.144 155.778 12.317 230.5 56.714 399.75 0s399.75 0 399.75 0V105.5H0V62.595Z" fill="currentColor"/></svg>
       </div>
 
       <Container>
@@ -18,7 +16,7 @@ export default function Footer() {
           <p className="text-lg md:text-xl xl:text-2xl max-w-[980px] mx-auto">Join the party on Instagram - <a href="#" target="_blank" rel="noreferrer noopener" className="inline-block hover:text-off-black underline">@wiveygrows</a></p>
         </div>
 
-        <div className="absolute top-0 right-[30vw] z-0 mt-[-20vw] mr-[-18vw] xl:mr-[-15vw] hidden md:block">
+        <div className="absolute top-0 right-[30vw] z-0 mt-[-13vw] md:mt-[-20vw] xl:mt-[-15vw] 2xl:mt-[-220px] mr-[-18vw] xl:mr-[-15vw] hidden md:block">
           <div className="w-[36vw] md:w-[16vw] xl:w-[18vw] max-w-[260px]">
             <ReactSVG 
               src="images/sunflower.svg"

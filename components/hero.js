@@ -2,7 +2,7 @@ import { ReactSVG } from 'react-svg'
 
 export default function Hero({ heading }) {
   return (
-    <div className="w-full pt-[200px] pb-8 md:pb-8 xl:pb-12 bg-green relative mb-[17vw] md:mb-[15vw]">
+    <div className="w-full pt-[200px] pb-10 md:pb-12 xl:pb-16 bg-green relative mb-[17vw] md:mb-[12vw]">
       <div className="w-full text-center relative z-10">              
         <div className="relative inline-block">
           <div className="absolute top-0 right-0 z-0 mt-[-16%] md:mt-[-15%] lg:mt-[-10%] mr-[12%]">
@@ -19,10 +19,8 @@ export default function Hero({ heading }) {
         </div>
       </div>
 
-      <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-15vw] z-0">
-        <svg className="w-full bg-off-white" viewBox="0 0 1440 320">
-          <path fill="currentColor" fill-opacity="1" d="M0,160L60,176C120,192,240,224,360,224C480,224,600,192,720,165.3C840,139,960,117,1080,122.7C1200,128,1320,160,1380,176L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-        </svg>
+      <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-5.5vw] z-0">
+        <svg className="w-full bg-off-white" viewBox="0 0 1599 106" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1599 42.905s-164.5 68.781-406.5 62.144c-242-6.637-238.543-49.932-393-62.144-155.778-12.317-230.5-56.714-399.75 0S0 42.905 0 42.905V0h1599v42.905Z" fill="currentColor"/></svg>
       </div>
     </div>
   )
