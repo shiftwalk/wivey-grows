@@ -13,7 +13,7 @@ export default function Home() {
     
       <Header active={'home'} />
       
-      <div className="w-full min-h-screen py-28 bg-green text-off-white flex items-center justify-center mb-[13vw] md:mb-[12vw]">
+      <div className="w-full min-h-screen py-28 bg-green text-off-white flex items-center justify-center mb-[15vw] md:mb-[15vw] xl:mb-[12vw]">
 
         <div className="absolute bottom-0 left-0 top-auto z-0 -mb-6 md:-mb-12">
           <div className="w-[36vw] md:w-[25vw] xl:w-[22vw] max-w-[40vh] ml-[-10vw] md:ml-0">
