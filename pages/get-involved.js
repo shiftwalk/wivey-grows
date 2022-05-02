@@ -2,10 +2,8 @@ import Layout from '@/components/layout'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Container from '@/components/container'
-import FancyLink from '@/components/fancyLink'
-import { fade } from '@/helpers/transitions'
-import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+import Hero from '@/components/hero'
 
 export default function GetInvolved() {
   return (
@@ -14,37 +12,69 @@ export default function GetInvolved() {
 
       <Header active={'get-involved'} />
 
-      <LazyMotion features={domAnimation}>
-        <m.div
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
-          <Container>
-            <m.div variants={fade} className="mb-12 md:mb-16 xl:mb-24">
-              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Get Involved</h1>
-              <div className="content max-w-3xl mb-4">
-                <p>Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share & learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
+      <Hero heading="Get Involved" />
+
+      <Container>
+        <div className="relative">
+          <article className="mb-[10vw] overflow-hidden pt-3">
+            <div className="flex flex-wrap md:-mx-10 mb-[10vw]">
+              <div className="w-full md:w-1/2 md:px-10 md:pt-8 mb-12 md:mb-0">
+                <p className="text-xl md:text-2xl xl:text-3xl mb-10 md:mb-12 xl:mb-16">Wivey Grows is a project set up to enable the community to grow together.</p>
+
+                <div className="mb-4 md:mb-10 xl:mb-12">
+                  <span className="block uppercase text-lg md:text-xl xl:text-2xl">Email us</span>
+                  <a href="#" className="block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words">info@wiveygrows.net</a>
+                </div>
+
+                <div className="mb-4 md:mb-10 xl:mb-12">
+                  <span className="block uppercase text-lg md:text-xl xl:text-2xl">Instagram</span>
+                  <a href="#" className="block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words">@wiveygrows</a>
+                </div>
+
+                <div className="mb-4 md:mb-10 xl:mb-12">
+                  <span className="block uppercase text-lg md:text-xl xl:text-2xl">Facebook</span>
+                  <a href="#" className="block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words">wiveygrows</a>
+                </div>
               </div>
 
-              <div className="content max-w-3xl mb-4">
-                <ul>
-                  <li>Email: <a href="mailto:info@wiveygrows.net" className="underline hover:text-gray-500 focus:text-gray-500">info@wiveygrows.net</a></li>
-                  <li>Instagram: <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/wiveygrows" className="underline hover:text-gray-500 focus:text-gray-500">@wiveygrows</a></li>
-                  <li className="mb-5">Facebook: <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/wiveygrows" className="underline hover:text-gray-500 focus:text-gray-500">wiveygrows</a></li>
-                  <li><a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/wiveygrows" className="underline hover:text-gray-500 focus:text-gray-500">Newsletter</a></li>
-
-                  <li><a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/wiveygrows" className="underline hover:text-gray-500 focus:text-gray-500">Donate</a></li>
-                </ul>
+              <div className="w-full md:w-1/2 md:px-10">
+                <div className="relative w-full md:w-11/12">
+                  <div className="w-full h-full bg-green absolute inset-0 rounded-2xl rotate-[2.5deg] scale-[1.01] z-0"></div>
+                  <img src="https://placedog.net/720/450" alt="CHANGE ME" className="w-full rounded-2xl relative z-10" />
+                </div>
               </div>
-            </m.div>
-          </Container>
+            </div>
+            
+            <div className="relative">
+              <div className="flex flex-wrap md:-mx-10">
+                <div className="w-full md:w-1/2 md:px-10 text-center mb-12 md:mb-0">
+                  <div className="relative mb-8 p-[2px]">
+                    <div className="w-full h-full bg-green absolute inset-0 rounded-2xl rotate-[2.5deg] z-0"></div>
+                    <img src="https://placedog.net/720/480" alt="CHANGE ME" className="w-full rounded-2xl relative z-10" />
+                  </div>
+                  <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Help Us</h3>
 
-          <m.div variants={fade} className="w-full">
-            <Footer />
-          </m.div>
-        </m.div>
-      </LazyMotion>
+                  <a href="#" className="inline-block mx-auto text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Make A Donation</a>
+                </div>
+
+                <div className="w-full md:w-1/2 md:px-10 text-center">
+                  <div className="relative mb-8 p-[2px]">
+                    <div className="w-full h-full bg-green-light absolute inset-0 rounded-2xl rotate-[2.5deg] z-0"></div>
+                    <img src="https://placedog.net/720/480" alt="CHANGE ME" className="w-full rounded-2xl relative z-10" />
+                  </div>
+                  <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Stay In The Loop</h3>
+
+                  <a href="#" className="inline-block mx-auto text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Get Updates</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </Container>
+
+      <div className="w-full">
+        <Footer />
+      </div>
     </Layout>
   )
 }

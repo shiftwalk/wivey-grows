@@ -3,6 +3,9 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Container from '@/components/container'
 import { NextSeo } from 'next-seo'
+import { ReactSVG } from 'react-svg'
+import Hero from '@/components/hero'
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -11,21 +14,11 @@ export default function About() {
 
       <Header active={'about'} />
 
-      <div className="w-full pt-[200px] pb-8 md:pb-8 xl:pb-12 bg-green relative mb-[17vw] md:mb-[15vw]">
-        <div className="w-full text-center relative z-10">
-          <h1 className="text-off-white text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display">Our Mission</h1>
-        </div>
-
-        <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-15vw] z-0">
-          <svg className="w-full bg-off-white" viewBox="0 0 1440 320">
-            <path fill="currentColor" fill-opacity="1" d="M0,160L60,176C120,192,240,224,360,224C480,224,600,192,720,165.3C840,139,960,117,1080,122.7C1200,128,1320,160,1380,176L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-          </svg>
-        </div>
-      </div>
+      <Hero heading="Our mission" />
 
       <Container>
         <div className="relative">
-          <article className="mb-[10vw]">
+          <article className="mb-[10vw] overflow-hidden pt-2">
             <div className="flex flex-wrap md:-mx-10 xl:items-center mb-[13vw]">
               <div className="w-full md:w-1/2 md:px-10 mb-8 md:mb-0">
                 <div className="relative">
@@ -36,8 +29,17 @@ export default function About() {
               <div className="w-full md:w-1/2 md:px-10">
                 <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12 mb-8">Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share &amp; learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
 
-                <a href="#" className="inline-block font-display bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Get Involved</a>
+                <Link href="/get-involved"><a className="inline-block font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Get Involved</a></Link>
               </div>
+            </div>
+            
+            <div className="w-[30vw] md:w-[16vw] xl:w-[30vw] mx-auto text-center md:mb-[2vw] xl:mb-[2vw]">
+              <ReactSVG
+                src="images/sunflower.svg"
+                beforeInjection={(svg) => {
+                  svg.setAttribute('style', 'width: 100%', 'height: auto')
+                }}
+              />
             </div>
 
             <blockquote className="mb-[15vw] xl:mb-[12vw]">
