@@ -126,7 +126,7 @@ export default function GetInvolved(initialData) {
                   </div>
                   <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Stay In The Loop</h3>
 
-                  <a href="#" className="inline-block mx-auto text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Get Updates</a>
+                  <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Get Updates</a>
                 </div>
               </div>
             </div>
