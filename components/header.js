@@ -38,7 +38,7 @@ export default function Header({ active }) {
                 <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-green-light focus:text-green-light`}>
                   Donate
                 </a>
-                <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to membership login'} className={`uppercase text-off-white hover:text-green-light focus:text-green-light`}>
+                <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to membership login'} className={`uppercase text-off-white hover:text-green-light focus:text-green-light`}>
                   Login
                 </a>
               </div>

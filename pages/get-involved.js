@@ -66,9 +66,18 @@ export default function GetInvolved(initialData) {
       <Container>
         <div className="relative">
           <article className="mb-[10vw] overflow-hidden pt-3">
+            <div className="w-full flex flex-wrap mb-8 md:mb-[8vw] md:-mx-10">
+              <div className="w-full md:w-9/12 md:px-10">
+               <p className="text-lg md:text-xl xl:text-2xl w-full md:max-w-[50vw] mb-8 md:mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+
+              <div className="flex-1">
+                <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="inline-block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Become a Wivey Grower</a>
+              </div>
+            </div>
+
             <div className="flex flex-wrap md:-mx-10 mb-[10vw]">
               <div className="w-full md:w-1/2 md:px-10 md:pt-8 order-2 md:order-1">
-                <p className="text-xl md:text-2xl xl:text-3xl mb-10 md:mb-12 xl:mb-16">Wivey Grows is a project set up to enable the community to grow together.</p>
 
                 <div className="mb-4 md:mb-10 xl:mb-12">
                   <span className="block uppercase text-lg md:text-xl xl:text-2xl">Email us</span>
