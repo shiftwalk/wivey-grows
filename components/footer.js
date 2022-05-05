@@ -1,6 +1,7 @@
 import Container from '@/components/container'
 import { ReactSVG } from 'react-svg'
 import FancyLink from './fancyLink'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -34,15 +35,15 @@ export default function Footer() {
 
           <div className="font-display text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-none md:leading-none lg:leading-none xl:leading-none 2xl:leading-none w-full md:w-auto md:mx-auto md:-mr-[10%] mb-8 md:mb-0 relative z-10">
             <div className="grid grid-cols-3 grid-rows-3 gap-x-12 gap-y-2">
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Home</a>
+              <Link href="/"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Home</a></Link>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>About Us</a>
+              <Link href="/about"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>About Us</a></Link>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Calendar</a>
+              <Link href="/calendar"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Calendar</a></Link>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Blog</a>
+              <Link href="/blog"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Blog</a></Link>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Get Involved</a>
+              <Link href="/get-involved"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Get Involved</a></Link>
 
               <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Donate</a>
 
@@ -55,11 +56,11 @@ export default function Footer() {
           </div>
           
           <div className="font-display text-sm md:text-sm lg:text-base xl:text-lg 2xl:text-xl leading-none md:leading-none lg:leading-none xl:leading-none 2xl:leading-none w-full md:w-auto md:ml-auto md:text-right">
-            <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Privacy</a>
+            {/* <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Privacy</a> */}
 
             <span className={`block uppercase text-off-white`}>All Rights Reserved 2022</span>
             
-            <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Site by ShiftWalk</a>
+            {/* <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Site by ShiftWalk</a> */}
           </div>
         </div>
       </Container>

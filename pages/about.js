@@ -6,28 +6,79 @@ import { NextSeo } from 'next-seo'
 import { ReactSVG } from 'react-svg'
 import Hero from '@/components/hero'
 import Link from 'next/link'
+import Carousel from '@/components/carousel'
+import SanityPageService from '@/services/sanityPageService'
+import BlockContent from '@sanity/block-content-to-react'
+import Image from '@/components/image'
 
-export default function About() {
+const query = `{
+  "about": *[_type == "about"][0]{
+    title,
+    heroHeading,
+    introText,
+    introImageGallery[] {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    quote,
+    ethosPoints[],
+    ourGrowersText,
+    seo {
+      ...,
+      shareGraphic {
+        asset->
+      }
+    }
+  },
+  "contact": *[_type == "contact"][0]{
+    email
+  },
+  "growers": *[_type == "growers"]{
+    firstName,
+    lastName,
+    image {
+      asset -> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    }
+  }
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function About(initialData) {
+  const { data: { about, contact, growers } } = pageService.getPreviewHook(initialData)()
+
   return (
     <Layout>
-      <NextSeo title="About" />
+      <NextSeo title={about.title} />
 
       <Header active={'about'} />
 
-      <Hero heading="Our mission" />
+      <Hero heading={about.heroHeading} />
 
       <Container>
         <div className="relative">
-          <article className="mb-[10vw] overflow-hidden pt-2">
+          <article className="mb-[10vw] overflow-hidden pt-5 px-3 md:px-3 xl:px-4">
             <div className="flex flex-wrap md:-mx-10 xl:items-center mb-[13vw]">
               <div className="w-full md:w-1/2 md:px-10 mb-8 md:mb-0">
-                <div className="relative">
-                  <div className="w-full h-full bg-green absolute inset-0 rounded-2xl rotate-[2.5deg] scale-[1.01] z-0"></div>
-                  <img src="https://placedog.net/720/450" alt="CHANGE ME" className="w-full rounded-2xl relative z-10" />
-                </div>
+                <Carousel single slides={about.introImageGallery} />
               </div>
               <div className="w-full md:w-1/2 md:px-10">
-                <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12 mb-8">Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share &amp; learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
+                <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12 mb-8">{about.introText}</p>
 
                 <Link href="/get-involved"><a className="inline-block font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Get Involved</a></Link>
               </div>
@@ -43,19 +94,27 @@ export default function About() {
             </div>
 
             <blockquote className="mb-[15vw] xl:mb-[12vw]">
-              <p className="text-[9vw] md:text-[6.5vw] xl:text-[6vw] 2xl:text-[100px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 font-display text-green-dark text-center w-11/12 mx-auto">“The <span className="text-green-light">regeneration of spaces</span> where the interaction between <span className="text-green-light">nature and people</span> can honour the needs of both”</p>
+              <p className="text-[9vw] md:text-[6.5vw] xl:text-[6vw] 2xl:text-[100px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 font-display text-green-dark text-center w-11/12 mx-auto quote">“{about.quote}”</p>
             </blockquote>
 
             <div className="grid grid-cols-12 gap-8 md:gap-16 xl:gap-28 mb-[20vw] xl:mb-[12vw]">
-            {[...Array(6)].map((e, i) => ( 
-              <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4" key={i}>
-                <span className="rounded-full w-12 md:w-16 xl:w-[72px] h-12 md:h-16 xl:h-[72px] bg-pink flex items-center justify-center mx-auto mb-6">
-                  <span className="block font-display leading-none md:leading-none xl:leading-none uppercase text-off-white text-2xl md:text-3xl xl:text-4xl">0{i + 1}</span>
-                </span>
+              {about.ethosPoints.map((e, i) => {
+                let color = 'bg-[#7C6B58]'
+                if (i == 0) { color = 'bg-orange' }
+                if (i == 1) { color = 'bg-yellow' }
+                if (i == 2) { color = 'bg-green' }
+                if (i == 3) { color = 'bg-green-light' }
+                if (i == 4) { color = 'bg-pink' }
+                return (
+                <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4" key={i}>
+                  <span className={`rounded-full w-12 md:w-16 xl:w-[72px] h-12 md:h-16 xl:h-[72px] flex items-center justify-center mx-auto mb-6 ${color}`}>
+                    <span className="block font-display leading-none md:leading-none xl:leading-none uppercase text-off-white text-2xl md:text-3xl xl:text-4xl">0{i + 1}</span>
+                  </span>
 
-                <p className="text-lg md:text-xl xl:text-2xl text-center px-[3%]">To engender respect and understanding of our relationship with and duty of care for the natural world and one another</p>
-              </div>
-            ))}
+                  <p className="text-lg md:text-xl xl:text-2xl text-center px-[3%]">{e}</p>
+                </div>
+                )
+              })}
             </div>
 
             <div className="flex flex-wrap mb-[10vw] md:mb-[7vw]">
@@ -63,18 +122,28 @@ export default function About() {
                 <h2 className="text-[11vw] md:text-[6.5vw] xl:text-[6vw] 2xl:text-[95px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display text-pink">Our<br/>Growers</h2>
               </div>
               <div className="w-full md:w-1/2">
-                <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12">Quisque sagittis turpis vel massa posuere pellentesque in condimentum mi. Sed sagittis tortor tellus, sit amet rhoncus nunc fringilla ut. Nullam facilisis dignissim tempus. Cras eget mauris eget enim ultrices vulputate.</p>
+                <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12">{about.ourGrowersText}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-12 gap-8 md:gap-12 xl:gap-16">
-            {[...Array(8)].map((e, i) => ( 
-              <div className="col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-3" key={i}>
-                <img src="https://placedog.net/550/720" alt="CHANGE ME" className={`w-full rounded-2xl relative z-10 border-[7px] mb-4 md:mb-6 ${ (i % 2) == 0 ? 'border-green-dark' : 'border-green-light' }`} />
+              {growers.map((e, i) => ( 
+                <div className="col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-3" key={i}>
 
-                <h3 className="text-2xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Rosie<br/>Riley</h3>
-              </div>
-            ))}
+                  <div className="h-[250px] md:h-[33vw] xl:h-[25vw] mb-4 md:mb-6">
+                    <Image
+                      image={e.image}
+                      layout="fill"
+                      fill
+                      noRound
+                      widthOverride={700}
+                      className={`w-full h-full rounded-2xl relative z-10 border-[7px] ${ (i % 2) == 0 ? 'border-green-dark' : 'border-green-light' }`}
+                    /> 
+                  </div>
+
+                  <h3 className="text-2xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">{e.firstName}<br/>{e.lastName}</h3>
+                </div>
+              ))}
             </div>
           </article>
         </div>
@@ -85,4 +154,12 @@ export default function About() {
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+
+  return {
+    props: { ...cms }
+  }
 }

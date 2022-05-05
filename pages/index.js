@@ -5,11 +5,53 @@ import Container from '@/components/container'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { ReactSVG } from 'react-svg'
+import Carousel from '@/components/carousel'
+import SanityPageService from '@/services/sanityPageService'
+import BlockContent from '@sanity/block-content-to-react'
+import Image from '@/components/image'
 
-export default function Home() {
+const query = `{
+  "home": *[_type == "home"][0]{
+    title,
+    heroHeading,
+    heroText,
+    communityText,
+    galleryVideo {
+      asset-> {
+        ...
+      }
+    },
+    imageGallery[] {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    seo {
+      ...,
+      shareGraphic {
+        asset->
+      }
+    }
+  },
+  "contact": *[_type == "contact"][0]{
+    email
+  }
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function Home(initialData) {
+  const { data: { home, contact } } = pageService.getPreviewHook(initialData)()
+
   return (
     <Layout>
-      <NextSeo title="Home" />
+      <NextSeo title={home.title} />
     
       <Header active={'home'} />
       
@@ -73,9 +115,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1 className="text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">Wivey Grows</h1>
+              <h1 className="text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{home.heroHeading}</h1>
             </div>
-            <p className="text-xl md:text-[23px] xl:text-[27px] leading-snug md:leading-snug xl:leading-snug max-w-[780px] 2xl:max-w-[880px] mx-auto">Wivey Grows is a grassroots project run by locals. Our mission is to provide the opportunity, space and support for all ages and abilities to grow, eat, learn, create and play in a nurtured and shared haven.</p>
+            <p className="text-xl md:text-[23px] xl:text-[27px] leading-snug md:leading-snug xl:leading-snug max-w-[780px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
           </div>
 
           <div className="flex space-x-5 justify-center">
@@ -98,14 +140,24 @@ export default function Home() {
             </Link>
           </div>
           <div className="w-full md:w-1/2">
-            <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12">Langley House is our beautiful 11-acre home! There are meadows to enjoy, flower and vegetable patches to build, a lake to explore, an orchard to re-establish, a sensory garden to bring back to life, trees &amp; willow in abundance for green woodwork, spaces for eco and horticultural therapy and a cob pizza oven to build!</p>
+            <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12">{home.communityText}</p>
           </div>
         </article>
       </Container>
+
+      <Carousel slides={home.imageGallery} video={home.galleryVideo.asset.url} />
 
       <div className="w-full">
         <Footer />
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+
+  return {
+    props: { ...cms }
+  }
 }

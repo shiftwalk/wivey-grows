@@ -5,19 +5,39 @@ import Container from '@/components/container'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { ReactSVG } from 'react-svg'
+import SanityPageService from '@/services/sanityPageService'
+import BlockContent from '@sanity/block-content-to-react'
+import Image from '@/components/image'
 
-export default function BlogPost() {
+const query = `*[_type == "blog" && slug.current == $slug][0]{
+  title,
+  publishedDate,
+  image {
+    asset -> {
+      ...
+    }
+  },
+  content,
+  slug {
+    current
+  }
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function BlogPost(initialData) {
+  const { data: { title, publishedDate, image, content, slug } } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title="Blog Post" />
+      <NextSeo title={title} />
 
       <Header active={'blog'} />
 
       <div className="w-full pt-[200px] pb-8 md:pb-8 xl:pb-12 bg-green relative mb-[17vw] md:mb-[15vw]">
         <div className="w-full text-center relative z-10">
-          <h1 className="text-off-white text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display max-w-[1200px] mx-auto px-6 md:px-12">Blog Post Title Goes Here</h1>
+          <h1 className="text-off-white text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display max-w-[1200px] mx-auto px-6 md:px-12">{title}</h1>
 
-          <span className="text-lg md:text-xl xl:text-2xl text-center block mb-1 md:mb-2 text-off-white">14.05.22</span>
+          <span className="text-lg md:text-xl xl:text-2xl text-center block mb-1 md:mb-2 text-off-white">{publishedDate}</span>
         </div>
 
         <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-15vw] z-0">
@@ -34,7 +54,12 @@ export default function BlogPost() {
               <div className="w-11/12 md:w-9/12 mx-auto max-w-[1000px]">
                 <div className="relative mb-[8vw] md:mb-[6vw]">
                   <div className={`absolute rounded-2xl inset-0 scale-[1.01] bg-green-light -rotate-3`}></div>
-                  <img src="https://placedog.net/720/460" alt="CHANGE ME" className={`w-full rounded-2xl relative z-10 mb-4 md:mb-6`} />
+
+                  <Image
+                    image={image}
+                    widthOverride={700}
+                    className="w-full rounded-2xl relative z-10 mb-4 md:mb-6"
+                  />
 
                   <div className="absolute top-0 left-0 z-[100] ml-[-5%] md:ml-[-10%] xl:ml-[-14%] mt-[0%] md:mt-[12%] xl:mt-[20%] rotate-3">
                     <div className="w-[18vw] md:w-[14vw]">
@@ -50,13 +75,7 @@ export default function BlogPost() {
 
                 <div className="w-11/12 md:w-10/12">
                   <div className="content content--fancy mb-10 md:mb-12 xl:mb-16">
-                    <p>Wivey Grows is a project set up to enable the community to grow together. All are welcome to come, dig, build, plant, eat, share &amp; learn alongside a regular group of gardeners, facilitating the regeneration of this incredible local space.</p>
-
-                    <p>Quisque sagittis turpis vel massa posuere pellentesque in condimentum mi. Sed sagittis tortor tellus, sit amet rhoncus nunc fringilla ut. Nullam facilisis dignissim tempus. Cras eget mauris eget enim ultrices vulputate. Phasellus non nulla at enim tincidunt lobortis sit amet scelerisque dolor. Proin dignissim mauris dui, ut vehicula nulla venenatis at. Suspendisse suscipit egestas maximus. Duis elit nisl, bibendum ut lectus id, hendrerit pharetra nibh. Phasellus pulvinar dolor et efficitur porttitor.</p>
-
-                    <p>Pellentesque quis massa eros. Integer massa est, interdum vel congue id, egestas a diam. Pellentesque pulvinar, turpis vitae sodales gravida, dolor justo cursus nibh, et porttitor lectus urna eu augue. Nunc non odio id massa lacinia tristique nec quis diam. Aliquam erat volutpat. Pellentesque porta tellus vel dictum euismod. Aenean ut imperdiet ante. Donec molestie erat a enim dictum maximus. Nullam at diam id nisi rhoncus interdum. Sed malesuada porttitor cursus.</p>
-
-                    <p>Integer gravida, ligula in ullamcorper egestas, lorem neque tincidunt lacus, at congue nisi mauris quis lectus. Vestibulum faucibus ornare elementum. Aenean porttitor in magna non dapibus. Proin vel arcu vitae nisi varius tincidunt vel eu lorem. Phasellus sed lacus at metus pretium dapibus. Donec vehicula lectus ac sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum cursus id nulla eget placerat. Curabitur sed nisi vel ligula volutpat hendrerit a at urna. Cras non lectus auctor, convallis orci ac, pretium sem.</p>
+                    <BlockContent serializers={{ container: ({ children }) => children }} blocks={content} />
                   </div>
 
                   <div className="md:flex md:space-x-6">
@@ -80,4 +99,19 @@ export default function BlogPost() {
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return {
+    props
+  };
+}
+
+export async function getStaticPaths() {
+  const paths = await pageService.fetchPaths('blog')
+  return {
+    paths: paths,
+    fallback: false,
+  };
 }
