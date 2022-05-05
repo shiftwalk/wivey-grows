@@ -22,7 +22,7 @@ export default function Header({ active }) {
                 </a>
               </Link>
 
-              <div className="mx-auto flex-1 hidden md:flex space-x-5 justify-center">
+              <div className="mx-auto flex-1 hidden md:flex space-x-5 lg:space-x-6 xl:space-x-8 justify-center">
                 <FancyLink extraClasses="uppercase" destination="/" a11yText="Navigate to the home page" label="Home" active={active == 'home'} />
 
                 <FancyLink extraClasses="uppercase" destination="/about" a11yText="Navigate to the about page" label="About Us" active={active == 'about'} />
