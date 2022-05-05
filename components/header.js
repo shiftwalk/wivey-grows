@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Header({ active }) {
   return (
     <header className="absolute top-0 left-0 right-0 w-full z-50">
-      <div className="bg-green-light text-off-white py-2">
+      <div className="bg-yellow text-off-black py-2">
         <Container>
           <div className="text-center">
             <span className="block uppercase">Wivey Grows is officially launched!</span>

@@ -141,3 +141,7 @@ body {
 
   }
 }
+
+.calendar {
+  @apply w-full h-full;
+}

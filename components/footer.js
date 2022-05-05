@@ -5,14 +5,14 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-yellow text-off-white pt-10 md:pt-16 xl:pt-24 pb-5 relative z-0 mt-[25vw] xl:mt-[20vw]">
+    <footer className="bg-yellow text-off-black pt-10 md:pt-16 xl:pt-24 pb-5 relative z-0 mt-[25vw] xl:mt-[20vw]">
       <div className="w-full text-yellow absolute top-0 left-0 right-0 mt-[-6vw]">
         <svg className="w-full bg-off-white" viewBox="0 0 1599 105" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 62.595S164.5-6.185 406.5.451c242 6.637 238.543 49.932 393 62.144 155.778 12.317 230.5 56.714 399.75 0s399.75 0 399.75 0V105.5H0V62.595Z" fill="currentColor"/></svg>
       </div>
 
       <Container>
         <div className="text-center mb-12 md:pb-20 xl:mb-32 relative z-10">
-          <h3 className="text-[10vw] md:text-[6vw] xl:text-[5vw] 2xl:text-[100px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display">Let's Get Social</h3>
+          <h3 className="text-[10vw] md:text-[6vw] xl:text-[5vw] 2xl:text-[120px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display">Let's Get Social</h3>
 
           <p className="text-lg md:text-xl xl:text-2xl max-w-[980px] mx-auto">Join the party on Instagram - <a href="#" target="_blank" rel="noreferrer noopener" className="inline-block hover:text-off-black underline">@wiveygrows</a></p>
         </div>
@@ -35,32 +35,31 @@ export default function Footer() {
 
           <div className="font-display text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-none md:leading-none lg:leading-none xl:leading-none 2xl:leading-none w-full md:w-auto md:mx-auto md:-mr-[10%] mb-8 md:mb-0 relative z-10">
             <div className="grid grid-cols-3 grid-rows-3 gap-x-12 gap-y-2">
-              <Link href="/"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Home</a></Link>
+              <Link href="/"><a aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Home</a></Link>
 
-              <Link href="/about"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>About Us</a></Link>
+              <Link href="/about"><a aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>About Us</a></Link>
 
-              <Link href="/calendar"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Calendar</a></Link>
+              <Link href="/calendar"><a aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Calendar</a></Link>
 
-              <Link href="/blog"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Blog</a></Link>
+              <Link href="/blog"><a aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Blog</a></Link>
 
-              <Link href="/get-involved"><a aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Get Involved</a></Link>
+              <Link href="/get-involved"><a aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Get Involved</a></Link>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Donate</a>
+              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Donate</a>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Login</a>
+              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Login</a>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Instagram</a>
+              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Instagram</a>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Facebook</a>
+              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Facebook</a>
             </div>
           </div>
           
           <div className="font-display text-sm md:text-sm lg:text-base xl:text-lg 2xl:text-xl leading-none md:leading-none lg:leading-none xl:leading-none 2xl:leading-none w-full md:w-auto md:ml-auto md:text-right">
-            {/* <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Privacy</a> */}
+            {/* <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Privacy</a> */}
 
-            <span className={`block uppercase text-off-white`}>All Rights Reserved 2022</span>
-            
-            {/* <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-black focus:text-off-black`}>Site by ShiftWalk</a> */}
+            <span className={`block uppercase text-off-black`}>All Rights Rewhited 2022</span>     
+            {/* <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus:text-off-white`}>Site by ShiftWalk</a> */}
           </div>
         </div>
       </Container>

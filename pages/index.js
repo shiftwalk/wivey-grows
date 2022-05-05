@@ -58,7 +58,7 @@ export default function Home(initialData) {
       <div className="w-full min-h-screen py-28 bg-green text-off-white flex items-center justify-center mb-[15vw] md:mb-[15vw] xl:mb-[12vw]">
 
         <div className="absolute bottom-0 left-0 top-auto z-0 -mb-6 md:-mb-12">
-          <div className="w-[36vw] md:w-[25vw] xl:w-[22vw] max-w-[40vh] ml-[-10vw] md:ml-0">
+          <div className="w-[36vw] md:w-[25vw] xl:w-[22vw] max-w-[40vh] ml-[-10vw] md:ml-0 md:hidden xl:block">
             <ReactSVG 
               src="images/person.svg"
               beforeInjection={(svg) => {
@@ -68,8 +68,8 @@ export default function Home(initialData) {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-[30vw] top-auto z-0 -mb-6 md:-mb-20 hidden md:block">
-          <div className="w-[36vw] md:w-[15vw] xl:w-[12vw] max-w-[30vh] ml-[-10vw] md:ml-0">
+        <div className="absolute bottom-0 left-[30vw] md:left-0 xl:left-[30vw] top-auto z-0 -mb-6 xl:-mb-20 hidden md:block">
+          <div className="w-[36vw] md:w-[30vw] xl:w-[12vw] max-w-[30vh] ml-[-10vw] md:ml-[0] xl:ml-0">
             <ReactSVG 
               src="images/sunflower.svg"
               beforeInjection={(svg) => {
@@ -90,7 +90,7 @@ export default function Home(initialData) {
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 top-auto z-0 -mb-6 md:-mb-12 mr-[43vw] md:mr-[33vw] xl:mr-[25vw]">
+        {/* <div className="absolute bottom-0 right-0 top-auto z-0 -mb-6 md:-mb-12 mr-[43vw] md:mr-[33vw] xl:mr-[25vw]">
           <div className="w-[20vw] md:w-[15vw] xl:w-[13vw] max-w-[220px] mr-[0] md:mr-0">
             <ReactSVG 
               src="images/hamper.svg"
@@ -99,7 +99,7 @@ export default function Home(initialData) {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="w-10/12 text-center relative z-10">
           <div className="mb-10">
@@ -117,7 +117,7 @@ export default function Home(initialData) {
 
               <h1 className="text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{home.heroHeading}</h1>
             </div>
-            <p className="text-xl md:text-[23px] xl:text-[27px] leading-snug md:leading-snug xl:leading-snug max-w-[780px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
+            <p className="text-xl md:text-[20px] lg:text-[20px] xl:text-[24px] leading-snug md:leading-snug xl:leading-snug max-w-[650px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
           </div>
 
           <div className="flex space-x-5 justify-center">
