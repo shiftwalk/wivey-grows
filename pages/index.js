@@ -56,11 +56,10 @@ export default function Home(initialData) {
       <Header active={'home'} />
       
       <div className="w-full min-h-screen py-28 bg-green text-off-white flex items-center justify-center mb-[15vw] md:mb-[15vw] xl:mb-[12vw]">
-
-        <div className="absolute bottom-0 left-0 top-auto z-0 -mb-6 md:-mb-12">
-          <div className="w-[36vw] md:w-[25vw] xl:w-[22vw] max-w-[40vh] ml-[-10vw] md:ml-0 md:hidden xl:block">
+        <div className="absolute bottom-0 left-[0] md:left-0 xl:left-[0] top-auto z-[1] -mb-6 xl:-mb-5 block">
+          <div className="w-[36vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] ml-[-10vw] md:ml-[5vw] xl:ml-[5vw]">
             <ReactSVG 
-              src="images/person.svg"
+              src="images/sunflower.svg"
               beforeInjection={(svg) => {
                 svg.setAttribute('style', 'width: 100%', 'height: auto')
               }}
@@ -68,10 +67,10 @@ export default function Home(initialData) {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-[30vw] md:left-0 xl:left-[30vw] top-auto z-0 -mb-6 xl:-mb-20 hidden md:block">
-          <div className="w-[36vw] md:w-[30vw] xl:w-[12vw] max-w-[30vh] ml-[-10vw] md:ml-[0] xl:ml-0">
+        <div className="absolute bottom-0 left-[0] md:left-0 xl:left-[0] top-auto z-0 -mb-8 xl:-mb-12 block">
+          <div className="w-[36vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] ml-[10vw] md:ml-[17vw] xl:ml-[17vw] rotate-45">
             <ReactSVG 
-              src="images/sunflower.svg"
+              src="images/flowers.svg"
               beforeInjection={(svg) => {
                 svg.setAttribute('style', 'width: 100%', 'height: auto')
               }}

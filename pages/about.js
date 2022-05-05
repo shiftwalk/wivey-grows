@@ -40,7 +40,7 @@ const query = `{
   "contact": *[_type == "contact"][0]{
     email
   },
-  "growers": *[_type == "growers"]{
+  "growers": *[_type == "growers"] | order(order, asc) {
     firstName,
     lastName,
     image {
@@ -84,7 +84,7 @@ export default function About(initialData) {
               </div>
             </div>
             
-            <div className="w-[30vw] md:w-[16vw] xl:w-[30vw] mx-auto text-center md:mb-[2vw] xl:mb-[2vw]">
+            <div className="w-[30vw] md:w-[16vw] xl:w-[13vw] mx-auto text-center md:mb-[2vw] xl:mb-[2vw] mb-8">
               <ReactSVG
                 src="images/sunflower.svg"
                 beforeInjection={(svg) => {

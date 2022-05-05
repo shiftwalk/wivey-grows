@@ -5,8 +5,20 @@ import Container from '@/components/container'
 import { NextSeo } from 'next-seo'
 import Hero from '@/components/hero'
 import Link from 'next/link'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function Calendar() {
+const query = `{
+  "calendar": *[_type == "calendar"][0]{
+    title,
+    introText
+  }
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function Calendar(initialData) {
+  const { data: { calendar, contact } } = pageService.getPreviewHook(initialData)()
+
   return (
     <Layout>
       <NextSeo title="Calendar" />
@@ -20,7 +32,7 @@ export default function Calendar() {
           <article className="mb-[10vw]">
             <div className="flex mb-8 md:mb-12">
               <div className="w-9/12">
-              <p className="text-lg md:text-xl xl:text-2xl w-full max-w-[40vw] mb-8 md:mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+              <p className="text-lg md:text-xl xl:text-2xl w-full max-w-[40vw] mb-8 md:mb-12">{calendar.introText}</p>
               </div>
 
               <div className="flex-1">
@@ -42,4 +54,12 @@ export default function Calendar() {
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+
+  return {
+    props: { ...cms }
+  }
 }
