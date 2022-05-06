@@ -62,7 +62,7 @@ export default function Header({ active, light }) {
 
         { menuOpen && (
           <div className="fixed inset-0 z-[10000] bg-green h-screen w-full p-6">
-            <div className="absolute bottom-0 right-[0] top-auto z-0 -mb-6 block">
+            <div className="absolute bottom-0 right-[0] top-auto z-0 mb-8 block">
               <div className="w-[45vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] mr-8">
                 <ReactSVG
                   src="images/sunflower.svg"
