@@ -41,7 +41,7 @@ export default function BlogIndex(initialData) {
       <Container>
         <div className="relative">
           <article className="mb-[10vw]">
-            <div className="grid grid-cols-12 gap-8 md:gap-12 xl:gap-20">
+            <div className="grid grid-cols-10 md:grid-cols-12 gap-8 md:gap-12 xl:gap-20">
             {blog.map((e, i) => {
               let d = new Date(e.publishedDate);
               let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(d);
@@ -50,7 +50,7 @@ export default function BlogIndex(initialData) {
 
               return (
                 <Link href={`/blog/${e.slug.current}`}>
-                  <a className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4 px-6 text-center group focus-visible:border-none focus-visible:outline-none block w-full" key={i}>
+                  <a className="col-span-10 md:col-span-6 lg:col-span-4 xl:col-span-4 px-6 text-center group focus-visible:border-none focus-visible:outline-none block w-full" key={i}>
                     <div className="relative mb-2 md:mb-6">
                       <div className={`absolute rounded-2xl inset-0 scale-[1.01] ${ (i % 2) == 0 ? 'bg-green-dark rotate-3' : 'bg-green-light -rotate-3' }`}></div>
 

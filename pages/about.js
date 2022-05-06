@@ -97,7 +97,7 @@ export default function About(initialData) {
               <p className="text-[9vw] md:text-[6.5vw] xl:text-[6vw] 2xl:text-[100px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 font-display text-green-dark text-center w-11/12 mx-auto quote">“{about.quote}”</p>
             </blockquote>
 
-            <div className="grid grid-cols-12 gap-8 md:gap-16 xl:gap-28 mb-[20vw] xl:mb-[12vw]">
+            <div className="grid grid-cols-10 md:grid-cols-12 gap-8 md:gap-16 xl:gap-28 mb-[20vw] xl:mb-[12vw]">
               {about.ethosPoints.map((e, i) => {
                 let color = 'bg-[#7C6B58]'
                 if (i == 0) { color = 'bg-orange' }
@@ -106,7 +106,7 @@ export default function About(initialData) {
                 if (i == 3) { color = 'bg-green-light' }
                 if (i == 4) { color = 'bg-pink' }
                 return (
-                <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4" key={i}>
+                <div className="col-span-10 md:col-span-6 lg:col-span-4 xl:col-span-4" key={i}>
                   <span className={`rounded-full w-12 md:w-16 xl:w-[72px] h-12 md:h-16 xl:h-[72px] flex items-center justify-center mx-auto mb-6 ${color}`}>
                     <span className="block font-display leading-none md:leading-none xl:leading-none uppercase text-off-white text-2xl md:text-3xl xl:text-4xl">0{i + 1}</span>
                   </span>
@@ -126,11 +126,11 @@ export default function About(initialData) {
               </div>
             </div>
 
-            <div className="grid grid-cols-12 gap-8 md:gap-12 xl:gap-16">
+            <div className="grid grid-cols-10 md:grid-cols-12 gap-8 md:gap-12 xl:gap-16">
               {growers.map((e, i) => ( 
-                <div className="col-span-6 md:col-span-4 lg:col-span-4 xl:col-span-3" key={i}>
+                <div className="col-span-5 md:col-span-4 lg:col-span-4 xl:col-span-3" key={i}>
 
-                  <div className="h-[250px] md:h-[33vw] xl:h-[25vw] mb-4 md:mb-6">
+                  <div className="h-[200px] md:h-[33vw] xl:h-[25vw] mb-4 md:mb-6">
                     <Image
                       image={e.image}
                       layout="fill"
