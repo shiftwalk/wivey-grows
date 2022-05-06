@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="bg-yellow text-off-black pt-10 md:pt-16 xl:pt-24 pb-5 relative z-0 mt-[25vw] xl:mt-[20vw]">
-      <div className="w-full text-yellow absolute top-0 left-0 right-0 mt-[-6vw]">
+      <div className="w-full text-yellow absolute top-0 left-0 right-0 mt-[-4.1vw]">
         <svg className="w-full bg-off-white" viewBox="0 0 1599 105" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 62.595S164.5-6.185 406.5.451c242 6.637 238.543 49.932 393 62.144 155.778 12.317 230.5 56.714 399.75 0s399.75 0 399.75 0V105.5H0V62.595Z" fill="currentColor"/></svg>
       </div>
 
@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full flex justify-center mb-12 md:pb-20 xl:mb-32">
-          <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noopener noreferrer" className="inline-block font-display bg-off-black hover:bg-green-dark text-yellow px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4">Wivey Grows Newsletter</a>
+          <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noopener noreferrer" className="inline-block font-display bg-off-black hover:bg-off-white hover:text-off-black text-yellow px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4">Wivey Grows Newsletter</a>
         </div>
 
         <div className="absolute top-0 right-[30vw] z-0 mt-[-13vw] md:mt-[-20vw] xl:mt-[-15vw] 2xl:mt-[-220px] mr-[-18vw] xl:mr-[-15vw] hidden md:block">

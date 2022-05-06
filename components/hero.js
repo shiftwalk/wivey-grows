@@ -19,7 +19,7 @@ export default function Hero({ heading }) {
         </div>
       </div>
 
-      <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-5.5vw] -mt-2">
+      <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-5.6vw] -mt-2">
         <svg className="w-full bg-off-white -translate-y-1" viewBox="0 0 1599 106" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1599 42.905s-164.5 68.781-406.5 62.144c-242-6.637-238.543-49.932-393-62.144-155.778-12.317-230.5-56.714-399.75 0S0 42.905 0 42.905V0h1599v42.905Z" fill="currentColor"/></svg>
       </div>
     </div>
