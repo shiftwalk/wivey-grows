@@ -51,11 +51,11 @@ body {
 }
 
 .embla__slide {
-  @apply py-[3vw] pl-[8vw] min-w-[65vw] md:min-w-[55vw] relative;
+  @apply py-[3vw] pl-[8vw] min-w-[80vw] md:min-w-[55vw] relative;
 }
 
 .embla__slide__inner {
-  @apply rounded-xl -rotate-3 bg-opacity-60 h-[33vw] relative;
+  @apply rounded-xl -rotate-3 bg-opacity-60 h-[45vw] md:h-[33vw] relative;
 
   img {
     @apply rounded-2xl !important;
@@ -104,7 +104,7 @@ body {
 }
 
 .embla__dots {
-  @apply flex list-none  space-x-2 justify-center;
+  @apply flex list-none  space-x-2 justify-center mt-4 md:mt-0;
 }
 
 .embla__dot {

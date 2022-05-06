@@ -69,7 +69,7 @@ export default function GetInvolved(initialData) {
           <article className="mb-[10vw] pt-3 md:w-10/12 mx-auto">
             <div className="w-full flex flex-wrap mb-8 md:mb-[8vw] lg:-mx-10 relative">
               <div className="w-full md:w-9/12 lg:px-10">
-                <h2 className="text-[9vw] md:text-[6.2vw] xl:text-[5.25vw] 2xl:text-[85px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display text-pink">Become A<br/>Wivey Grower</h2>
+                <h2 className="text-[10vw] md:text-[6.2vw] xl:text-[5.25vw] 2xl:text-[85px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display text-pink">Become A<br/>Wivey Grower</h2>
 
                 <div className=" w-full md:max-w-[55vw] lg:max-w-[45vw] xl:max-w-[40vw] 2xl:max-w-[780px] mb-8 md:mb-12 content content--fancy--small">
                   <p>Becoming a Wivey Grower means you can come along to any Wivey Grower day that you can see in the calendar of activities, as well as any of our upcoming events. It's free, there is no obligation, you can do as much or as little as you like. </p>

@@ -40,9 +40,9 @@ export default function BlogPost(initialData) {
 
       <Header active={'blog'} />
 
-      <div className="w-full pt-[200px] pb-8 md:pb-8 xl:pb-12 bg-green relative mb-[17vw] md:mb-[15vw]">
+      <div className="w-full pt-[160px] md:pt-[200px] pb-8 md:pb-8 xl:pb-12 bg-green relative mb-[17vw] md:mb-[15vw]">
         <div className="w-full text-center relative z-10">
-          <h1 className="text-off-white text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display max-w-[1200px] mx-auto px-6 md:px-12">{title}</h1>
+          <h1 className="text-off-white text-[13vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display max-w-[1200px] mx-auto px-6 md:px-12">{title}</h1>
 
           <span className="text-lg md:text-xl xl:text-2xl text-center block mb-1 md:mb-2 text-off-white">{`${da} ${mo} ${ye}`}{author && (<> - by {author}</>)}</span>
         </div>

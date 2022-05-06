@@ -15,7 +15,7 @@ export default function Hero({ heading }) {
               />
             </div>
           </div>
-          <h1 className="text-off-white text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{heading}</h1>
+          <h1 className="text-off-white text-[13vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{heading}</h1>
         </div>
       </div>
 

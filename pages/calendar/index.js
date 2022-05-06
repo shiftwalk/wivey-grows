@@ -51,7 +51,7 @@ export default function Calendar(initialData) {
                 </div>
               </div>
 
-              <div className="bg-green h-[110vw] md:h-[60vw] p-6 rounded-2xl w-full">
+              <div className="bg-green h-[110vw] md:h-[60vw] p-3 md:p-6 rounded-2xl w-full">
                 <iframe className="calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%237CB342&ctz=Europe%2FLondon&title=Wivey%20Grows&showPrint=0&hl=en_GB&src=d2l2ZXlncm93c0BnbWFpbC5jb20" frameborder="0" scrolling="no"></iframe>
               </div>
             </div>            

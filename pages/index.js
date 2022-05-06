@@ -127,7 +127,7 @@ export default function Home(initialData) {
 
               <h1 className="text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{home.heroHeading}</h1>
             </div>
-            <p className="text-xl md:text-[20px] lg:text-[22px] xl:text-[26px] leading-snug md:leading-snug xl:leading-snug max-w-[650px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
+            <p className="text-[17px] md:text-[20px] lg:text-[22px] xl:text-[26px] leading-snug md:leading-snug xl:leading-snug max-w-[650px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
           </div>
 
           <div className="flex space-x-3 md:space-x-5 justify-center">
@@ -150,7 +150,7 @@ export default function Home(initialData) {
             </Link>
           </div>
           <div className="w-full md:w-1/2">
-            <p className="text-xl md:text-[20px] lg:text-[22px] xl:text-[26px] leading-snug md:leading-snug xl:leading-snug w-11/12 md:w-10/12">{home.communityText}</p>
+            <p className="text-[18px] md:text-[20px] lg:text-[22px] xl:text-[26px] leading-snug md:leading-snug xl:leading-snug w-11/12 md:w-10/12">{home.communityText}</p>
           </div>
         </article>
       </Container>
