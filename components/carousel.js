@@ -48,7 +48,7 @@ const Carousel = ({ slides, contained, id, video, single }) => {
                     </div>
                   )}
                   <div className="absolute inset-0 flex items-center justify-center w-full h-full z-20">
-                    <button onClick={toggleVideo} className="border-none outline-none focus:border-none focus:outline-none w-[8vw] h-[8vw] rounded-full bg-pink flex items-center justify-center">
+                    <button onClick={toggleVideo} className="border-none outline-none w-[8vw] h-[8vw] rounded-full bg-pink flex items-center justify-center focus-visible:outline-none focus-visible:border-none focus-visible:ring-8 ring-pink ring-offset-off-white ring-offset-8 hover:scale-110 hover:bg-orange">
                       <svg className="w-[3vw] -mr-2" viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.5 19.402c2 1.155 2 4.041 0 5.196L5 42.785c-2 1.154-4.5-.29-4.5-2.598V3.813C.5 1.504 3 .061 5 1.215l31.5 18.187Z" fill="#F8F3DD"/></svg>
                     </button>
                   </div>

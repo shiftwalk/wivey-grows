@@ -65,14 +65,14 @@ export default function GetInvolved(initialData) {
 
       <Container>
         <div className="relative">
-          <article className="mb-[10vw] overflow-hidden pt-3">
+          <article className="mb-[10vw] pt-3 md:w-10/12 mx-auto">
             <div className="w-full flex flex-wrap mb-8 md:mb-[8vw] md:-mx-10">
               <div className="w-full md:w-9/12 md:px-10">
-               <p className="text-lg md:text-xl xl:text-2xl w-full md:max-w-[50vw] mb-8 md:mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+               <p className="text-lg md:text-xl xl:text-2xl w-full md:max-w-[40vw] mb-8 md:mb-12">Becoming a Wivey Grower means you can come along to any Wivey Grower days! You can see these in the calendar below, as well as our upcoming events. There is no obligation, you can do as much or as little as you like. Sign up here to create your Wivey Grower username and access our calendar of activities. You can then click to attend any activity in advance or just turn up on the day and sign in. It's so easy! Once you've set up your account, you can just log in anytime by clicking the top right corner of this page or download the MyImpact app so that you can see our calendar, sign in and sign out on your phone.</p>
               </div>
 
               <div className="flex-1">
-                <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="inline-block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Become a Wivey Grower</a>
+                <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="inline-block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Become a Wivey Grower</a>
               </div>
             </div>
 
@@ -81,17 +81,17 @@ export default function GetInvolved(initialData) {
 
                 <div className="mb-4 md:mb-10 xl:mb-12">
                   <span className="block uppercase text-lg md:text-xl xl:text-2xl">Email us</span>
-                  <a href={`mailto:${contact.email}`} className="block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words">info@wiveygrows.net</a>
+                  <a href={`mailto:${contact.email}`} className="inline-block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">info@wiveygrows.net</a>
                 </div>
 
                 <div className="mb-4 md:mb-10 xl:mb-12">
                   <span className="block uppercase text-lg md:text-xl xl:text-2xl">Instagram</span>
-                  <a href={contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words">@wiveygrows</a>
+                  <a href={contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">@wiveygrows</a>
                 </div>
 
                 <div className="mb-4 md:mb-10 xl:mb-12">
                   <span className="block uppercase text-lg md:text-xl xl:text-2xl">Facebook</span>
-                  <a href={contact.facebookUrl} target="_blank" rel="noopener noreferrer" className="block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words">wiveygrows</a>
+                  <a href={contact.facebookUrl} target="_blank" rel="noopener noreferrer" className="inline-block uppercase text-pink hover:text-off-black text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-display underline break-words focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">wiveygrows</a>
                 </div>
               </div>
 
@@ -121,7 +121,7 @@ export default function GetInvolved(initialData) {
                   </div>
                   <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Help Us</h3>
 
-                  <a href={contact.donationUrl} target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Make A Donation</a>
+                  <a href={contact.donationUrl} target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Make A Donation</a>
                 </div>
 
                 <div className="w-full md:w-1/2 md:px-10 text-center">
@@ -135,7 +135,7 @@ export default function GetInvolved(initialData) {
                   </div>
                   <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Stay In The Loop</h3>
 
-                  <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Get Updates</a>
+                  <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-off-white ring-offset-4">Get Updates</a>
                 </div>
               </div>
             </div>

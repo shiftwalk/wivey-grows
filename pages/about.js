@@ -80,7 +80,7 @@ export default function About(initialData) {
               <div className="w-full md:w-1/2 md:px-10">
                 <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12 mb-8">{about.introText}</p>
 
-                <Link href="/get-involved"><a className="inline-block font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Get Involved</a></Link>
+                <Link href="/get-involved"><a className="inline-block font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Get Involved</a></Link>
               </div>
             </div>
             

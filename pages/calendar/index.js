@@ -37,7 +37,7 @@ export default function Calendar(initialData) {
                 </div>
 
                 <div className="flex-1">
-                  <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="inline-block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Become a Wivey Grower</a>
+                  <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="inline-block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Become a Wivey Grower</a>
                 </div>
               </div>
 

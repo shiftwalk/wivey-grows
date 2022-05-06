@@ -121,10 +121,10 @@ export default function Home(initialData) {
 
           <div className="flex space-x-5 justify-center">
             <Link href="/about">
-              <a className="block font-display bg-orange hover:bg-off-black px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">About Us</a>
+              <a className="block font-display bg-orange hover:bg-off-black px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-orange ring-offset-green ring-offset-4">About Us</a>
             </Link>
             <Link href="/get-involved">
-              <a className="block font-display bg-green-light hover:bg-off-black px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none">Get Involved</a>
+              <a className="block font-display bg-green-light hover:bg-off-black px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-green-light ring-offset-green ring-offset-4">Get Involved</a>
             </Link>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Home(initialData) {
             <h2 className="text-[11vw] md:text-[6.5vw] xl:text-[6vw] 2xl:text-[95px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display text-pink">A True<br/>Community</h2>
 
             <Link href="/calendar">
-              <a className="inline-block font-display bg-yellow hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0">Our Calendar</a>
+              <a className="inline-block font-display bg-yellow hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-yellow ring-offset-off-white ring-offset-4">Our Calendar</a>
             </Link>
           </div>
           <div className="w-full md:w-1/2">

@@ -108,7 +108,7 @@ body {
 }
 
 .embla__dot {
-  @apply rounded-full w-[18px] md:w-[22px] xl:w-[26px] h-[18px] md:h-[22px] xl:h-[26px] border border-green;
+  @apply rounded-full w-[18px] md:w-[22px] xl:w-[26px] h-[18px] md:h-[22px] xl:h-[26px] border border-green focus-visible:outline-none focus-visible:ring-2 ring-green ring-offset-off-white ring-offset-4 hover:bg-green-light hover:bg-opacity-25;
 }
 
 .embla__dot.is-selected {
@@ -144,4 +144,9 @@ body {
 
 .calendar {
   @apply w-full h-full;
+}
+
+
+body {
+  @apply selection:bg-off-black selection:text-off-white
 }

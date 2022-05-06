@@ -80,11 +80,11 @@ export default function BlogPost(initialData) {
 
                   <div className="md:flex md:space-x-6">
                     <Link href="/blog">
-                      <a className="block md:inline-block font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none text-center mb-5 md:mb-0">Back To All Posts</a>
+                      <a className="block md:inline-block font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none text-center mb-5 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Back To All Posts</a>
                     </Link>
 
                     <Link href="/get-involved">
-                      <a className="block md:inline-block font-display bg-green-light hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none text-center">Get Involved</a>
+                      <a className="block md:inline-block font-display bg-green-light hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none text-center focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-green-light ring-offset-off-white ring-offset-4">Get Involved</a>
                     </Link>
                   </div>
                 </div>

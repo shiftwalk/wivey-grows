@@ -43,7 +43,7 @@ export default function BlogIndex(initialData) {
             <div className="grid grid-cols-12 gap-8 md:gap-12 xl:gap-20">
             {blog.map((e, i) => ( 
               <Link href={`/blog/${e.slug.current}`}>
-                <a className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4 px-6 text-center" key={i}>
+                <a className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-4 px-6 text-center group focus-visible:border-none focus-visible:outline-none" key={i}>
                   <div className="relative mb-2 md:mb-6">
                     <div className={`absolute rounded-2xl inset-0 scale-[1.01] ${ (i % 2) == 0 ? 'bg-green-dark rotate-3' : 'bg-green-light -rotate-3' }`}></div>
 
@@ -55,7 +55,7 @@ export default function BlogIndex(initialData) {
                   </div>
 
                   <span className="text-lg md:text-xl xl:text-2xl text-center block mb-1 md:mb-2">{e.publishedDate}</span>
-                  <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">{e.title}</h3>
+                  <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase group-hover:text-off-black group-focus-visible:outline-none group-focus-visible:border-none group-focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">{e.title}</h3>
                 </a>
               </Link>
             ))}
