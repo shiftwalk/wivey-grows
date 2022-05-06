@@ -68,7 +68,7 @@ export default function BlogPost(initialData) {
                     className="w-full rounded-2xl relative z-10 mb-4 md:mb-6"
                   />
 
-                  <div className="absolute top-0 left-0 z-[100] ml-[-5%] md:ml-[-10%] xl:ml-[-14%] mt-[0%] md:mt-[12%] xl:mt-[20%] rotate-3">
+                  <div className="absolute top-0 left-0 z-[50] hidden md:block ml-[-5%] md:ml-[-10%] xl:ml-[-14%] mt-[0%] md:mt-[12%] xl:mt-[20%] rotate-3">
                     <div className="w-[18vw] md:w-[14vw]">
                       <ReactSVG
                         src="images/sunflower.svg"
