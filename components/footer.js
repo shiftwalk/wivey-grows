@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-yellow text-off-black pt-10 md:pt-16 xl:pt-24 pb-5 relative z-0 mt-[25vw] xl:mt-[20vw]">
+    <footer className="bg-yellow text-off-black pt-[20vw] md:pt-[13vw] xl:pt-[12vw] 2xl:pt-[13vw] pb-5 relative z-0 mt-[25vw] xl:mt-[20vw]">
       <div className="w-full text-yellow absolute top-0 left-0 right-0 mt-[-4.1vw]">
         <svg className="w-full bg-off-white" viewBox="0 0 1599 105" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 62.595S164.5-6.185 406.5.451c242 6.637 238.543 49.932 393 62.144 155.778 12.317 230.5 56.714 399.75 0s399.75 0 399.75 0V105.5H0V62.595Z" fill="currentColor"/></svg>
       </div>
