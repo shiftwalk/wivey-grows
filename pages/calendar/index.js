@@ -32,12 +32,22 @@ export default function Calendar(initialData) {
           <article className="mb-[10vw]">
             <div className="flex flex-wrap md:w-10/12 mx-auto">
               <div className="w-full flex flex-wrap mb-8 md:mb-12">
-                <div className="w-9/12">
-                  <p className="text-lg md:text-xl xl:text-2xl w-full max-w-[40vw] mb-8 md:mb-12">{calendar.introText}</p>
+                <div className="w-full lg:w-9/12">
+                  <div className=" w-full md:max-w-[55vw] lg:max-w-[48vw] xl:max-w-[40vw] 2xl:max-w-[780px] mb-8 md:mb-12 content content--fancy--small">
+                    <p className="">Becoming a Wivey Grower means you can come along to any Wivey Grower day that you can see in the calendar below, as well as any of our upcoming events.</p>
+
+                    <p>There is no obligation, you can do as much or as little as you like.</p>
+                  </div>
                 </div>
 
-                <div className="flex-1">
-                  <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="inline-block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Become a Wivey Grower</a>
+                <div className="lg:flex-1">
+                  <Link href="/get-involved">
+                    <a className="block text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-5 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Get Involved</a>
+                  </Link>
+
+                  <Link href="/about">
+                    <a className="block text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-off-white ring-offset-4">Our Mission</a>
+                  </Link>
                 </div>
               </div>
 

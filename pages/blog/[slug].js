@@ -18,6 +18,7 @@ const query = `*[_type == "blog" && slug.current == $slug][0]{
     }
   },
   content,
+  author,
   slug {
     current
   }
@@ -26,7 +27,13 @@ const query = `*[_type == "blog" && slug.current == $slug][0]{
 const pageService = new SanityPageService(query)
 
 export default function BlogPost(initialData) {
-  const { data: { title, publishedDate, image, content, slug } } = pageService.getPreviewHook(initialData)()
+  const { data: { title, publishedDate, image, content, slug, author } } = pageService.getPreviewHook(initialData)()
+  
+  let d = new Date(publishedDate);
+  let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(d);
+  let mo = new Intl.DateTimeFormat('en', { month: 'long' }).format(d);
+  let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+
   return (
     <Layout>
       <NextSeo title={title} />
@@ -37,7 +44,7 @@ export default function BlogPost(initialData) {
         <div className="w-full text-center relative z-10">
           <h1 className="text-off-white text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display max-w-[1200px] mx-auto px-6 md:px-12">{title}</h1>
 
-          <span className="text-lg md:text-xl xl:text-2xl text-center block mb-1 md:mb-2 text-off-white">{publishedDate}</span>
+          <span className="text-lg md:text-xl xl:text-2xl text-center block mb-1 md:mb-2 text-off-white">{`${da} ${mo} ${ye}`}{author && (<> - by {author}</>)}</span>
         </div>
 
         <div className="w-full text-green absolute bottom-0 left-0 right-0 mb-[-15vw] z-0">
@@ -57,7 +64,7 @@ export default function BlogPost(initialData) {
 
                   <Image
                     image={image}
-                    widthOverride={700}
+                    widthOverride={1200}
                     className="w-full rounded-2xl relative z-10 mb-4 md:mb-6"
                   />
 

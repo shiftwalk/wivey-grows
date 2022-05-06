@@ -32,6 +32,17 @@ const query = `{
         y
       },
     },
+    galleryImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
     seo {
       ...,
       shareGraphic {
@@ -57,7 +68,7 @@ export default function Home(initialData) {
       
       <div className="w-full min-h-screen py-28 bg-green text-off-white flex items-center justify-center mb-[15vw] md:mb-[15vw] xl:mb-[12vw]">
         <div className="absolute bottom-0 left-[0] md:left-0 xl:left-[0] top-auto z-[1] -mb-6 xl:-mb-5 block">
-          <div className="w-[36vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] ml-[-10vw] md:ml-[5vw] xl:ml-[5vw]">
+          <div className="w-[28vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] ml-[-10vw] md:ml-[5vw] xl:ml-[5vw]">
             <ReactSVG 
               src="images/sunflower.svg"
               beforeInjection={(svg) => {
@@ -68,7 +79,7 @@ export default function Home(initialData) {
         </div>
 
         <div className="absolute bottom-0 left-[0] md:left-0 xl:left-[0] top-auto z-0 -mb-8 xl:-mb-12 block">
-          <div className="w-[36vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] ml-[10vw] md:ml-[17vw] xl:ml-[17vw] rotate-45">
+          <div className="w-[30vw] md:w-[20vw] xl:w-[23vw] 2xl:w-[20vw] max-w-[28vh] ml-[10vw] md:ml-[17vw] xl:ml-[17vw] rotate-45">
             <ReactSVG 
               src="images/flowers.svg"
               beforeInjection={(svg) => {
@@ -79,7 +90,7 @@ export default function Home(initialData) {
         </div>
 
         <div className="absolute bottom-0 right-0 top-auto z-0 -mb-6 md:-mb-12">
-          <div className="w-[55vw] md:w-[40vw] xl:w-[33vw] max-w-[50vh] mr-[0] md:mr-0">
+          <div className="w-[45vw] md:w-[40vw] xl:w-[33vw] max-w-[50vh] mr-[0] md:mr-0">
             <ReactSVG 
               src="images/bench.svg"
               beforeInjection={(svg) => {
@@ -116,15 +127,15 @@ export default function Home(initialData) {
 
               <h1 className="text-[12vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{home.heroHeading}</h1>
             </div>
-            <p className="text-xl md:text-[20px] lg:text-[20px] xl:text-[24px] leading-snug md:leading-snug xl:leading-snug max-w-[650px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
+            <p className="text-xl md:text-[20px] lg:text-[22px] xl:text-[26px] leading-snug md:leading-snug xl:leading-snug max-w-[650px] 2xl:max-w-[880px] mx-auto">{home.heroText}</p>
           </div>
 
-          <div className="flex space-x-5 justify-center">
+          <div className="flex space-x-3 md:space-x-5 justify-center">
             <Link href="/about">
-              <a className="block font-display bg-orange hover:bg-off-black px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-orange ring-offset-green ring-offset-4">About Us</a>
+              <a className="block font-display bg-orange hover:bg-off-black px-5 md:px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-orange ring-offset-green ring-offset-4">About Us</a>
             </Link>
             <Link href="/get-involved">
-              <a className="block font-display bg-green-light hover:bg-off-black px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-green-light ring-offset-green ring-offset-4">Get Involved</a>
+              <a className="block font-display bg-green-light hover:bg-off-black px-5 md:px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-green-light ring-offset-green ring-offset-4">Get Involved</a>
             </Link>
           </div>
         </div>
@@ -139,12 +150,12 @@ export default function Home(initialData) {
             </Link>
           </div>
           <div className="w-full md:w-1/2">
-            <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12">{home.communityText}</p>
+            <p className="text-xl md:text-[20px] lg:text-[22px] xl:text-[26px] leading-snug md:leading-snug xl:leading-snug w-11/12 md:w-10/12">{home.communityText}</p>
           </div>
         </article>
       </Container>
 
-      <Carousel slides={home.imageGallery} video={home.galleryVideo.asset.url} />
+      <Carousel slides={home.imageGallery} video={home.galleryVideo.asset.url} videoImage={home.galleryImage} />
 
       <div className="w-full">
         <Footer />

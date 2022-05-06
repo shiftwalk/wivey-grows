@@ -11,10 +11,14 @@ export default function Footer() {
       </div>
 
       <Container>
-        <div className="text-center mb-12 md:pb-20 xl:mb-32 relative z-10">
+        <div className="text-center relative z-10 mb-6 md:pb-6 xl:mb-8">
           <h3 className="text-[10vw] md:text-[6vw] xl:text-[5vw] 2xl:text-[120px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display">Let's Get Social</h3>
 
-          <p className="text-lg md:text-xl xl:text-2xl max-w-[980px] mx-auto">Join the party on Instagram - <a href="https://instagram.com/wiveygrows" target="_blank" rel="noreferrer noopener" className="inline-block hover:text-off-white underline focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4">@wiveygrows</a></p>
+          <p className="text-lg md:text-xl xl:text-2xl max-w-[980px] mx-auto">Join the party on Instagram - <a href="https://instagram.com/wiveygrows" target="_blank" rel="noreferrer noopener" className="inline-block hover:text-off-white underline focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4">@wiveygrows</a> - or sign up to our newsletter below.</p>
+        </div>
+
+        <div className="w-full flex justify-center mb-12 md:pb-20 xl:mb-32">
+          <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noopener noreferrer" className="inline-block font-display bg-off-black hover:bg-green-dark text-yellow px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4">Wivey Grows Newsletter</a>
         </div>
 
         <div className="absolute top-0 right-[30vw] z-0 mt-[-13vw] md:mt-[-20vw] xl:mt-[-15vw] 2xl:mt-[-220px] mr-[-18vw] xl:mr-[-15vw] hidden md:block">
@@ -47,11 +51,11 @@ export default function Footer() {
 
               <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Donate</a>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Login</a>
+              <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Login</a>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Instagram</a>
+              <a href="https://instagram.com/wiveygrows" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Instagram</a>
 
-              <a href="https://example.com" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Facebook</a>
+              <a href="https://facebook.com/wiveygrows" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Facebook</a>
             </div>
           </div>
           
