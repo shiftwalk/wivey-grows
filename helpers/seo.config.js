@@ -5,7 +5,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://sg-next-tailwind-motion.vercel.app/',
+    url: 'https://wiveygrows.net/',
     site_name: 'Wivey Grows',
     images: [
       {
