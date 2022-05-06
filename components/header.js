@@ -14,7 +14,7 @@ export default function Header({ active, light }) {
   return (
     <header className="absolute top-0 left-0 right-0 w-full z-50">
       <Link href="/blog/wivey-grows-launch">
-        <a className="block bg-yellow hover:bg-green-light focus:border-none focus:outline-none focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-yellow ring-offset-green ring-offset-8 text-off-black py-2">
+        <a className="block bg-yellow hover:bg-green-light focus:border-none focus:outline-none focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-yellow ring-offset-green ring-offset-8 text-off-black py-2 text-sm md:text-base">
           <Container>
             <div className="text-center">
               <span className="block uppercase">Wivey Grows is officially launched!</span>
