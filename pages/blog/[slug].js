@@ -59,7 +59,7 @@ export default function BlogPost(initialData) {
           <article className="mb-[10vw]">
             <div className="flex flex-wrap xl:items-center mb-[13vw]">
               <div className="w-11/12 md:w-9/12 mx-auto max-w-[1000px]">
-                <div className="relative mb-[8vw] md:mb-[6vw]">
+                <div className="relative mb-[8vw] md:mb-[6vw] w-11/12 md:w-[88%] mx-auto">
                   <div className={`absolute rounded-2xl inset-0 scale-[1.01] bg-green-light -rotate-3`}></div>
 
                   <Image

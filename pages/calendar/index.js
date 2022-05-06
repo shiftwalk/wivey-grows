@@ -6,6 +6,7 @@ import { NextSeo } from 'next-seo'
 import Hero from '@/components/hero'
 import Link from 'next/link'
 import SanityPageService from '@/services/sanityPageService'
+import SanityBlockContent from '@sanity/block-content-to-react'
 
 const query = `{
   "calendar": *[_type == "calendar"][0]{
@@ -34,9 +35,7 @@ export default function Calendar(initialData) {
               <div className="w-full flex flex-wrap mb-8 md:mb-12">
                 <div className="w-full lg:w-9/12">
                   <div className=" w-full md:max-w-[55vw] lg:max-w-[48vw] xl:max-w-[40vw] 2xl:max-w-[780px] mb-8 md:mb-12 content content--fancy--small">
-                    <p className="">Becoming a Wivey Grower means you can come along to any Wivey Grower day that you can see in the calendar below, as well as any of our upcoming events.</p>
-
-                    <p>There is no obligation, you can do as much or as little as you like.</p>
+                    <SanityBlockContent serializers={{ container: ({ children }) => children }} blocks={calendar.introText} />
                   </div>
                 </div>
 

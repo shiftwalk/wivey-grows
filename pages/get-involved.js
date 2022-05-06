@@ -23,6 +23,7 @@ const query = `{
         y
       },
     },
+    becomeAWiveyGrowerText,
     instagramUrl,
     facebookUrl,
     donationUrl,
@@ -72,18 +73,14 @@ export default function GetInvolved(initialData) {
                 <h2 className="text-[10vw] md:text-[6.2vw] xl:text-[5.25vw] 2xl:text-[85px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display text-pink">Become A<br/>Wivey Grower</h2>
 
                 <div className=" w-full md:max-w-[55vw] lg:max-w-[45vw] xl:max-w-[40vw] 2xl:max-w-[780px] mb-8 md:mb-12 content content--fancy--small">
-                  <p>Becoming a Wivey Grower means you can come along to any Wivey Grower day that you can see in the calendar of activities, as well as any of our upcoming events. It's free, there is no obligation, you can do as much or as little as you like. </p>
-
-                  <p>Sign up here to create your Wivey Grower username. You can then login anytime by clicking the top right corner of this page or <a className="hover:text-pink focus:outline-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4" href="https://support.betterimpact.com/siteguide/my-impact-app/" target="_blank" rel="noopener noreferrer">download the MyImpact app so</a> that you can see our calendar of activities, click to attend in advance or just turn up on the day and sign in. It's so easy!</p>
-
-                  <p>Please note that all Wivey Growers can only come to the site for scheduled Wivey Grower days/activities/events. We must not turn up outside of these scheduled times, as per our policies for the safety of residents of Langley House and the Wivey Growers.</p>
+                  <BlockContent serializers={{ container: ({ children }) => children }} blocks={contact.becomeAWiveyGrowerText} />
                 </div>
               </div>
 
               <div className="lg:flex-1 relative">
-                <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-pink hover:bg-off-black text-off-white px-6 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 lg:mb-6 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Become a Grower</a>
+                <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-pink hover:bg-off-black text-off-white px-6 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 lg:mb-6 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Become a Wivey Grower</a>
 
-                <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-off-white ring-offset-4">Grower Login</a>
+                <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-off-white ring-offset-4">Wivey Grower Login</a>
 
                 <div className="absolute bottom-0 right-0 top-auto z-0 mb-[10%] hidden lg:block">
                   <div className="w-[20vw] md:w-[15vw] xl:w-[20vw] max-w-[300px] mr-[0] md:mr-0">
