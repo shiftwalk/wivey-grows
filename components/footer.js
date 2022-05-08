@@ -12,7 +12,7 @@ export default function Footer() {
 
       <Container>
         <div className="text-center relative z-10 mb-6 md:pb-6 xl:mb-8">
-          <h3 className="text-[10vw] md:text-[6vw] xl:text-[5vw] 2xl:text-[120px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display">Let's Get Social</h3>
+          <h3 className="text-[10vw] md:text-[6vw] xl:text-[5vw] 2xl:text-[120px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display">Let's Get Growing</h3>
 
           <p className="text-lg md:text-xl xl:text-2xl max-w-[980px] mx-auto">Join the party on Instagram - <a href="https://instagram.com/wiveygrows" target="_blank" rel="noreferrer noopener" className="inline-block hover:text-off-white underline focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4">@wiveygrows</a> - or sign up to our newsletter below.</p>
         </div>
