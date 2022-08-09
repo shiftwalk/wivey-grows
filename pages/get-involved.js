@@ -140,7 +140,7 @@ export default function GetInvolved(initialData) {
                   </div>
                   <h3 className="text-3xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">Help Us</h3>
 
-                  <a href="https://www.stewardship.org.uk/pages/wiveygrows" target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Make A Donation</a>
+                  <a href="https://www.paypal.com/donate/?campaign_id=4VEXFBMTXAZX8" target="_blank" rel="noopener noreferrer" className="inline-block mx-auto text-center font-display bg-pink hover:bg-off-black text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Make A Donation</a>
                 </div>
 
                 <div className="w-full md:w-1/2 md:px-10 text-center">

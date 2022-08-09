@@ -49,7 +49,7 @@ export default function Footer() {
 
               <Link href="/get-involved"><a aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Get Involved</a></Link>
 
-              <a href="https://www.stewardship.org.uk/pages/wiveygrows" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Donate</a>
+              <a href="https://www.paypal.com/donate/?campaign_id=4VEXFBMTXAZX8" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Donate</a>
 
               <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-black hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Login</a>
 

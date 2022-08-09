@@ -45,7 +45,7 @@ export default function Header({ active, light }) {
               </div>
 
               <div className="ml-auto flex space-x-3 md:space-x-5 justify-end">
-                <a href="https://www.stewardship.org.uk/pages/wiveygrows" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase ${light ? 'text-green-dark' : 'text-off-white' } hover:text-green-light focus-visible:text-off-white focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-green-light ring-offset-green ring-offset-8`}>
+                <a href="https://www.paypal.com/donate/?campaign_id=4VEXFBMTXAZX8" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase ${light ? 'text-green-dark' : 'text-off-white' } hover:text-green-light focus-visible:text-off-white focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-green-light ring-offset-green ring-offset-8`}>
                   Donate
                 </a>
                 <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to membership login'} className={`uppercase ${light ? 'text-green-dark' : 'text-off-white' } hover:text-green-light focus-visible:text-off-white focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-green-light ring-offset-green ring-offset-8`}>
@@ -98,7 +98,7 @@ export default function Header({ active, light }) {
               </ul>
 
               <ul className="text-[6vw] font-display mt-8">
-                <li className="block"><a href="https://www.stewardship.org.uk/pages/wiveygrows" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Donate</a></li>
+                <li className="block"><a href="https://www.paypal.com/donate/?campaign_id=4VEXFBMTXAZX8" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Donate</a></li>
 
                 <li className="block"><a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" aria-label={'Navigate to donate'} className={`uppercase text-off-white hover:text-off-white focus-visible:text-off-black focus-visible:border-none focus-visible:outline-none focus-visible:ring-4 ring-off-black ring-offset-yellow ring-offset-4`}>Login</a></li>
 
