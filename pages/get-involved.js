@@ -78,11 +78,13 @@ export default function GetInvolved(initialData) {
               </div>
 
               <div className="lg:flex-1 relative">
+                <a href="https://wiveycares.us20.list-manage.com/subscribe?u=5f56eb825ed21a0b7f53393e7&id=50725394d5" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-orange hover:bg-off-black text-off-white px-6 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 lg:mb-6 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-orange ring-offset-off-white ring-offset-4">Sign up for email updates</a>
+
                 <a href="http://bttr.im/bm7b6" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-pink hover:bg-off-black text-off-white px-6 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 lg:mb-6 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-pink ring-offset-off-white ring-offset-4">Become a Wivey Grower</a>
 
                 <a href="https://app.betterimpact.com/Login/LoginNoSearch/?agencyGuid=e7f8b012-8f7d-400d-a399-6255d119f17d" target="_blank" rel="noreferrer noopener" className="block text-center font-display bg-off-black hover:bg-pink text-off-white px-8 py-5 text-lg md:text-[2vw] 2xl:text-[30px] uppercase rounded-full leading-none md:leading-none xl:leading-none 2xl:leading-none mb-8 md:mb-0 focus-visible:outline-none focus-visible:border-none focus-visible:ring-4 ring-off-black ring-offset-off-white ring-offset-4">Wivey Grower Login</a>
 
-                <div className="absolute bottom-0 right-0 top-auto z-0 mb-[10%] hidden lg:block">
+                <div className="absolute bottom-0 right-0 top-auto z-0 mb-[-10%] hidden lg:block">
                   <div className="w-[20vw] md:w-[15vw] xl:w-[20vw] max-w-[300px] mr-[0] md:mr-0">
                     <ReactSVG
                       src="images/hamper.svg"
