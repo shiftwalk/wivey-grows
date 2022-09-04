@@ -2,7 +2,7 @@ import Img from 'next/image'
 import sanity from '@/services/sanity'
 import { useNextSanityImage } from 'next-sanity-image'
 
-export default function Image({ image, layout, widthOverride, heightOverride, noRound, focalPoint, className, priority, noCaption }) {
+export default function Image({ image, layout, widthOverride, heightOverride, noRound, asset, focalPoint, className, priority, noCaption }) {
   // Pass in custom URL builder props
   const myCustomImageBuilder = (imageUrlBuilder, options) => {
     return imageUrlBuilder
@@ -12,7 +12,7 @@ export default function Image({ image, layout, widthOverride, heightOverride, no
   };
   
   // Generate actual URL
-	const imageProps = useNextSanityImage(sanity.config, image.asset, { imageBuilder: myCustomImageBuilder });
+	const imageProps = useNextSanityImage(sanity.config, image ? image.asset : asset, { imageBuilder: myCustomImageBuilder });
 
   // Generate attributes for Img component
   const attributes = {};
@@ -21,7 +21,7 @@ export default function Image({ image, layout, widthOverride, heightOverride, no
     attributes.objectPosition = `${x * 100}% ${y * 100}%`;
   }
 
-  if (image.alt) { attributes.alt = image.alt } else { attributes.alt = 'MISSING ALT TEXT' }
+  if (image?.alt) { attributes.alt = image.alt } else { attributes.alt = 'MISSING ALT TEXT' }
   if (layout) { attributes.layout = layout } else { attributes.layout = 'responsive' }
   if (priority) { attributes.priority = true } else { attributes.priority = false }
 
@@ -29,7 +29,7 @@ export default function Image({ image, layout, widthOverride, heightOverride, no
     <figure className={`image ${className} ${layout == 'fill' && 'cover-image' } ${ noRound && 'image--no-round'}`}>
 		  <Img {...imageProps} {...attributes} />
       
-      {(image.caption && layout !== 'fill' && !noCaption) && (
+      {(image?.caption && layout !== 'fill' && !noCaption) && (
         <figcaption className="text-xs mt-2">"{image.caption}"</figcaption>
       )}
     </figure>

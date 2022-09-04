@@ -6,8 +6,8 @@ import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { ReactSVG } from 'react-svg'
 import SanityPageService from '@/services/sanityPageService'
-import BlockContent from '@sanity/block-content-to-react'
 import Image from '@/components/image'
+import EditorialContentWrapper from '../../components/editorial-content-wrapper'
 
 const query = `*[_type == "blog" && slug.current == $slug][0]{
   title,
@@ -17,7 +17,14 @@ const query = `*[_type == "blog" && slug.current == $slug][0]{
       ...
     }
   },
-  content,
+  newContent[] {
+    ...,
+    defaultImage {
+      asset -> {
+        ...
+      }
+    },
+  },
   author,
   slug {
     current
@@ -27,7 +34,7 @@ const query = `*[_type == "blog" && slug.current == $slug][0]{
 const pageService = new SanityPageService(query)
 
 export default function BlogPost(initialData) {
-  const { data: { title, publishedDate, image, content, slug, author } } = pageService.getPreviewHook(initialData)()
+  const { data: { title, publishedDate, image, content, newContent, slug, author } } = pageService.getPreviewHook(initialData)()
   
   let d = new Date(publishedDate);
   let ye = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(d);
@@ -82,7 +89,7 @@ export default function BlogPost(initialData) {
 
                 <div className="w-11/12 md:w-10/12">
                   <div className="content content--fancy mb-10 md:mb-12 xl:mb-16">
-                    <BlockContent serializers={{ container: ({ children }) => children }} blocks={content} />
+                    <EditorialContentWrapper text={newContent} />
                   </div>
 
                   <div className="md:flex md:space-x-6">
