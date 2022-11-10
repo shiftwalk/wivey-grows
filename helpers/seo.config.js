@@ -9,7 +9,7 @@ export default {
     site_name: 'Wivey Grows',
     images: [
       {
-        url: '/images/social.jpg',
+        url: 'images/social.jpg',
         width: 1200,
         height: 675,
         alt: `Wivey Grows Logo`,
