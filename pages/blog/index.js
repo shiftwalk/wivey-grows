@@ -9,7 +9,7 @@ import SanityPageService from '@/services/sanityPageService'
 import Image from '@/components/image'
 
 const query = `{
-  "blog": *[_type == "blog"] | order(date desc) {
+  "blog": *[_type == "blog"] | order(publishedDate desc) {
     title,
     image {
       asset -> {
