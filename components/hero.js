@@ -1,21 +1,38 @@
 import { ReactSVG } from 'react-svg'
 
-export default function Hero({ heading }) {
+export default function Hero({ heading, thin }) {
   return (
     <div className="w-full pt-[155px] md:pt-[200px] pb-10 md:pb-12 xl:pb-16 bg-green relative mb-[17vw] md:mb-[12vw]">
       <div className="w-full text-center relative z-10">              
         <div className="relative inline-block">
-          <div className="absolute top-0 right-0 z-0 mt-[-25%] md:mt-[-15%] lg:mt-[-10%] mr-[12%]">
-            <div className="w-[10vw] md:w-[7vw] xl:w-[6vw]">
-              <ReactSVG
-                src="images/duck.svg"
-                beforeInjection={(svg) => {
-                  svg.setAttribute('style', 'width: 100%', 'height: auto')
-                }}
-              />
+          { !thin && (
+            <div className="absolute top-0 right-0 z-0 mt-[-25%] md:mt-[-15%] lg:mt-[-10%] mr-[12%]">
+              <div className="w-[10vw] md:w-[7vw] xl:w-[6vw]">
+                <ReactSVG
+                  src="images/duck.svg"
+                  beforeInjection={(svg) => {
+                    svg.setAttribute('style', 'width: 100%', 'height: auto')
+                  }}
+                />
+              </div>
             </div>
+          )}
+
+          <div className={`${thin ? 'md:max-w-[70%] mx-auto relative' : ''}`}>
+            { thin && (
+              <div className="absolute top-0 right-0 z-0 mt-[-60px] md:mt-[-45px] lg:mt-[-45px] xl:mt-[-50px] mr-[18%]">
+                <div className="w-[10vw] md:w-[7vw] xl:w-[6vw]">
+                  <ReactSVG
+                    src="images/duck.svg"
+                    beforeInjection={(svg) => {
+                      svg.setAttribute('style', 'width: 100%', 'height: auto')
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+            <h1 className="text-off-white text-[13vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{heading}</h1>
           </div>
-          <h1 className="text-off-white text-[13vw] md:text-[10vw] xl:text-[8vw] 2xl:text-[130px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 uppercase font-display inline-block">{heading}</h1>
         </div>
       </div>
 

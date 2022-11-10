@@ -150,3 +150,7 @@ body {
 body {
   @apply selection:bg-off-black selection:text-off-white
 }
+
+.radio-embed {
+  @apply w-full mb-12 md:mb-20 !important;
+}

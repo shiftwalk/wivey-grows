@@ -30,6 +30,7 @@ const query = `{
     quote,
     ethosPoints[],
     ourGrowersText,
+    ourSponsorsText,
     seo {
       ...,
       shareGraphic {
@@ -54,13 +55,28 @@ const query = `{
         y
       },
     }
+  },
+  "sponsors": *[_type == "sponsors"] | order(order, asc) {
+    name,
+    text,
+    image {
+      asset -> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    }
   }
 }`
 
 const pageService = new SanityPageService(query)
 
 export default function About(initialData) {
-  const { data: { about, contact, growers } } = pageService.getPreviewHook(initialData)()
+  const { data: { about, contact, growers, sponsors } } = pageService.getPreviewHook(initialData)()
 
   return (
     <Layout>
@@ -126,7 +142,7 @@ export default function About(initialData) {
               </div>
             </div>
 
-            <div className="grid grid-cols-10 md:grid-cols-12 gap-8 md:gap-12 xl:gap-16">
+            <div className="grid grid-cols-10 md:grid-cols-12 gap-8 md:gap-12 xl:gap-16 mb-[10vw] md:mb-[7vw]">
               {growers.map((e, i) => ( 
                 <div className="col-span-5 md:col-span-4 lg:col-span-4 xl:col-span-3" key={i}>
 
@@ -142,6 +158,41 @@ export default function About(initialData) {
                   </div>
 
                   <h3 className="text-2xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">{e.firstName}<br/>{e.lastName}</h3>
+                </div>
+              ))}
+            </div>
+
+
+
+            <div className="flex flex-wrap mb-[10vw] md:mb-[7vw]">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-[11vw] md:text-[6.5vw] xl:text-[6vw] 2xl:text-[95px] leading-none md:leading-none xl:leading-none 2xl:leading-none mb-4 md:mb-6 uppercase font-display text-pink">Sponsors<br/>&amp; Donors</h2>
+              </div>
+              <div className="w-full md:w-1/2">
+                <p className="text-xl md:text-2xl xl:text-3xl w-11/12 md:w-10/12">{about.ourSponsorsText}</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-10 md:grid-cols-12 gap-8 md:gap-12 xl:gap-16">
+              {sponsors.map((e, i) => ( 
+                <div className="col-span-10 md:col-span-6 lg:col-span-4 xl:col-span-4" key={i}>
+
+                  <div className="h-[250px] md:h-[25vw] xl:h-[25vw] mb-4 md:mb-6">
+                    <Image
+                      image={e.image}
+                      layout="fill"
+                      fill
+                      noRound
+                      widthOverride={700}
+                      className={`w-full h-full rounded-2xl relative z-10 border-[7px] ${ (i % 2) == 0 ? 'border-green-dark' : 'border-green-light' }`}
+                    /> 
+                  </div>
+
+                  <h3 className="text-2xl md:text-[3vw] 2xl:text-[44px] leading-none md:leading-none xl:leading-none 2xl:leading-none text-pink font-display text-center uppercase">{e.name}</h3>
+
+                  <div className="content text-center w-full xl:w-9/12 mx-auto">
+                    <p className="text-base md:text-lg 2xl:text-xl">{e.text}</p>
+                  </div>
                 </div>
               ))}
             </div>
