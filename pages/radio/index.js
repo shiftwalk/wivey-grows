@@ -43,7 +43,10 @@ export default function RadioIndex(initialData) {
             <div className="w-full flex flex-wrap mb-12 md:mb-24 lg:mb-20">
               <div className="w-full lg:w-9/12">
                 <div className=" w-full md:max-w-[75vw] lg:max-w-[55vw] xl:max-w-[55vw] 2xl:max-w-[900px] mb-8 md:mb-12 content content--fancy--small">
-                  <p>Brand new for Wivey Grows and 10Radio - Sunday 30th October @ 11am sees a brand new 10Radio show broadcast by your host Wiveygrower. Tune in live on 105.3FM (in the 10 parishes area), <a href="http://10radio.org/" target="_blank" rel="noreferrer noopener">10Radio.org</a> on the internet (click the Listen Now link at the bottom of the page), through the 10Radio app (which you can purchase from your app store) or via many internet radio player apps or internet radio websites to hear the following features and more...</p>
+
+                  <p>Brand new Wivey Grows Radio Show with 10Radio broadcast by your host Wiveygrower.</p>
+                  
+                  <p>Tune in live on 105.3FM, <a href="http://10radio.org/" target="_blank" rel="noreferrer noopener">10Radio.org</a>, through the 10Radio app or via many internet radio player apps or websites to hear the following features and more:</p>
 
                   <ul>
                     <li>• A Gardening, Nature and Wildlife Themed Music Playlist</li>
@@ -57,7 +60,6 @@ export default function RadioIndex(initialData) {
                     <li>• Weekly Weather Outlook</li>
                     <li>• Weekly Wivey Grows Session Information</li>
                     <li>• Upcoming Wivey Grows Event Information</li>
-                    <li>• Rich Talks Nature</li>
                     <li>• Information on How to Get Involved with Wivey Grows</li>
                     <li>• And other Features you want to hear.</li>
                   </ul>
@@ -66,7 +68,7 @@ export default function RadioIndex(initialData) {
 
                   <p>You can contact the show at <a href="mailto:wiveygrower@10radio.org" target="_blank" rel="noopener noreferrer">wiveygrower@10radio.org</a> if you have any suggestions of features we could add to the show or <a href="mailto:studio@10Radio.org" target="_blank" rel="noopener noreferrer">studio@10Radio.org</a> if you would like to contact the show live during the broadcast.</p>
 
-                  <p>Once the shows have been broadcast live, they will be available here (added below) so that you can listen to them at your leisure if you are unable to listen live.</p>
+                  <p>All the recorded shows are available below for you to listen back at your leisure.</p>
                 </div>
               </div>
 
