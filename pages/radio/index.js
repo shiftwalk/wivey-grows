@@ -9,7 +9,7 @@ import SanityPageService from '@/services/sanityPageService'
 import Image from '@/components/image'
 
 const query = `{
-  "radio": *[_type == "radio"] | order(date desc) {
+  "radio": *[_type == "radio"] | order(publishedDate desc) {
     title,
     image {
       asset -> {
